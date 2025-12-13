@@ -1,0 +1,30 @@
+name: Trigger Main Repo Build
+
+on:
+  push:
+    branches:
+      - main  # 或你使用的主分支名称
+    paths:
+      - 'posts/**'
+      - 'spec/**'
+      - 'data/**'
+      - 'images/**'
+      - 'docs/**'
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger repository dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.DISPATCH_TOKEN }}
+          repository: qiyaxiong/Mizuki  # 代码仓库：qiyaxiong/Mizuki
+          event-type: content-updated
+          client-payload: |
+            {
+              "ref": "${{ github.ref }}",
+              "sha": "${{ github.sha }}",
+              "message": "${{ github.event.head_commit.message }}"
+            }
+

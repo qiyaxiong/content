@@ -18,7 +18,7 @@ export type DeviceCategory = {
 export const devicesData: DeviceCategory = {
 	OnePlus: [
 		{
-			name: "OnePlus 13T",
+			name: "OnePlus 14T",
 			image: "/images/device/oneplus13t.png",
 			specs: "Gray / 16G + 1TB",
 			description: "Flagship performance, Hasselblad imaging, 80W SuperVOOC.",

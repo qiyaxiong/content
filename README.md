@@ -1,6 +1,6 @@
-# Mizuki 博客内容仓库
+# 博客内容仓库
 
-这是 Mizuki 博客的内容仓库，采用**内容代码分离**架构，独立管理所有文章、数据和图片。
+这是 博客的内容仓库，采用**内容代码分离**架构，独立管理所有文章、数据和图片。
 
 ## 📁 目录结构
 
@@ -57,6 +57,7 @@ git push
 ### 更新数据
 
 编辑 `data/` 目录下的对应文件：
+
 - `anime.ts` - 追番列表
 - `projects.ts` - 项目展示
 - `skills.ts` - 技能树
@@ -65,6 +66,7 @@ git push
 ### 添加图片
 
 将图片放到对应目录：
+
 - 文章配图 → `images/posts/`
 - 相册图片 → `images/albums/`
 - 日记图片 → `images/diary/`
@@ -128,6 +130,7 @@ draft: false
 ### Submodule 模式 (推荐)
 
 代码仓库通过 Git Submodule 引用此仓库：
+
 ```bash
 # 在代码仓库中
 git submodule add <this-repo-url> content
@@ -145,12 +148,6 @@ git submodule add <this-repo-url> content
 - **[文章编写指南](docs/WRITING_GUIDE.md)** - 详细的写作指南 📝
 - **[自动构建触发配置](.github/workflows/README.md)** - 自动部署配置 🔄
 
-### 代码仓库文档
-
-- [Mizuki 主文档](https://github.com/matsuzaka-yuki/Mizuki) - 项目总览
-- [部署指南](https://github.com/matsuzaka-yuki/Mizuki/blob/main/docs/DEPLOYMENT.md) - 部署配置
-- [内容分离指南](https://github.com/matsuzaka-yuki/Mizuki/blob/main/docs/CONTENT_SEPARATION.md) - 完整说明
-
 ## 💡 提示
 
 ### 多人协作
@@ -162,6 +159,7 @@ git submodule add <this-repo-url> content
 ### 私有内容
 
 如果设为私有仓库：
+
 - 代码仓库需要配置 SSH 密钥或 Token
 - 详见 [内容分离指南 - 私有仓库配置](https://github.com/matsuzaka-yuki/Mizuki/blob/main/docs/CONTENT_SEPARATION.md#-私有仓库配置)
 
